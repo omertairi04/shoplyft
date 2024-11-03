@@ -1,49 +1,36 @@
-import { useState } from 'react';
+import {useState} from "react";
 
 const NavBar = () => {
-  // State to control the visibility of the form
-  const [showForm, setShowForm] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  // Toggle form visibility when clicking "New Item"
-  const handleNewItemClick = (e) => {
-    e.preventDefault();  // Prevents navigation
-    setShowForm(!showForm);
-  };
-
+  // Function to toggle dropdown visibility
+  const toggleDropdown = () => setShowDropdown(!showDropdown);
   return (
     <nav className="navbar">
-      <h1>Shop Lyft</h1>
-      <div className="links">
-        <a
-          href="/create"
-          onClick={handleNewItemClick} // Trigger form display
-          style={{
-            color: "white",
-            backgroundColor: "#f1356d",
-            borderRadius: "8px",
-          }}
-        >
-          New Item
-        </a>
+      <h1>ShopLyft</h1>
+      <div
+        className="categories"
+        onMouseEnter={() => setShowDropdown(true)}
+        onMouseLeave={() => setShowDropdown(false)}
+      >
+        <a onClick={toggleDropdown}>Categories</a>
+        {/* Dropdown Menu */}
+        {showDropdown && (
+          <div className="dropdown">
+            <a href="/category/electronics">Electronics</a>
+            <a href="/category/clothing">Clothing</a>
+            <a href="/category/home">Home</a>
+            <a href="/category/books">Books</a>
+            <a href="/category/sports">Sports</a>
+          </div>
+        )}
       </div>
-
-      {/* Conditionally render the form based on showForm state */}
-      {showForm && (
-        <div className="new-item-form">
-          <h2>Add New Item</h2>
-          <form>
-            <label>Item Name:</label>
-            <input type="text" placeholder="Enter item name" />
-
-            <label>Item Quantity:</label>
-            <input type="number" placeholder="Enter quantity" />
-
-            <button type="submit">Add Item</button>
-          </form>
-        </div>
-      )}
+      <div className="links">
+        <a href="/">Link1</a>
+        <a href="/create">Link2</a>
+      </div>
     </nav>
-  );
+  )
 };
 
 export default NavBar;

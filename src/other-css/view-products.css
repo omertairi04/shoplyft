@@ -1,0 +1,118 @@
+.view-products {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+}
+
+.view-products h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: gray; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from anchor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor for clickable items */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn:active {
+    transform: translateY(0); /* Return to original position on click */
+}
+
+.size_location {
+    display: flex;
+    justify-content: space-between; /* Pushes content to both edges */
+    gap: 50px; /* Adds space between elements */
+}
+
+.size_location .card-text {
+    margin: 0;
+}
+
+#location {
+    margin-left: auto; /* Pushes 'Location' to the far right */
+}
+
+
+.condition-new {
+    color: #28a745; /* Green for New */
+    font-weight: bold;
+}
+
+.condition-like-new {
+    color: #17a2b8; /* Blue for Like New */
+    font-weight: bold;
+}
+
+.condition-gently-used {
+    color: #ffc107; /* Yellow for Gently Used */
+    font-weight: bold;
+}
+
+.condition-good {
+    color: #6c757d; /* Gray for Good */
+    font-weight: bold;
+}
+

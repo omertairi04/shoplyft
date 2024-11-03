@@ -1,0 +1,70 @@
+/* Center the form and add a soft background color */
+.register-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.register-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style the labels */
+.register-form label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Style input fields */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Change color on input focus */
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+    border-color: #f1356d;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(241, 53, 109, 0.5);
+}
+
+/* Style the button */
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1356d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Change button color on hover */
+.register-form button:hover {
+    background-color: #e02a5e;
+}
+
+.register-form button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
