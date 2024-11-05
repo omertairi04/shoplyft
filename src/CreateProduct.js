@@ -157,16 +157,6 @@ const CreateProduct = () => {
           </div>
         )}
         <div className="form-group">
-          <label>Phone Number</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="form-group">
           <label>Condition</label>
           <input
             type="text"
@@ -234,7 +224,7 @@ const CreateProduct = () => {
 
         {!isRent && ( // Sell-specific fields
           <div className="form-group">
-            <label>Selling Price: ${formData.sellingPrice}</label>
+            <label>Selling Price $</label>
             <input
               type="number"
               name="sellingPrice"

@@ -1,8 +1,19 @@
+
+.content {
+    background: linear-gradient(to bottom, rgba(255, 215, 185, 0.91) 23%, rgba(211, 24, 91, 0.8) 93%);
+    /*background-attachment: fixed; !* Makes the background fixed *!*/
+    /*background-size: cover;*/
+}
+
 .view-products {
     padding: 40px 20px;
     margin: 0 auto;
     max-width: 1200px;
-    background-color: #f9f9f9;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 9px 13px 26px -12px rgba(0,0,0,0.52);
+    -moz-box-shadow: 9px 13px 26px -12px rgba(0,0,0,0.52);
+    box-shadow: 9px 13px 26px -12px rgba(0,0,0,0.52);
 }
 
 .view-products h1 {
@@ -114,5 +125,52 @@
 .condition-good {
     color: #6c757d; /* Gray for Good */
     font-weight: bold;
+}
+
+.details {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFB74D; /* Peach background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.details:hover {
+    background: linear-gradient(90deg, #FF6F61, #FFB74D); /* Light Coral to Peach gradient on hover */
+}
+
+.button-container {
+    display: flex; /* Align buttons in a row */
+    gap: 30px; /* Space between buttons */
+}
+
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff69b4, #ff9800); /* Hot Pink to Orange gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.cart-button-icon {
+    color: #ff7f50;
+}
+
+.cart-button:hover {
+    background: linear-gradient(90deg, #ff9800, #ff69b4); /* Reverse gradient on hover */
+}
+
+/* Optional: Reset margin for all paragraph elements within buttons */
+.cart-button p {
+    margin: 0; /* Removes default margin */
 }
 
